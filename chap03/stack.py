@@ -29,13 +29,13 @@ class Stack(object):
         self.__items = []
 
     def pop(self):
-        if len(self.__items) == 0:
+        if not self.__items:
             raise EmptyStackError
 
         return self.__items.pop()
 
     def top(self):
-        if len(self.__items) == 0:
+        if not self.__items:
             raise EmptyStackError
 
         return self.__items[-1]
